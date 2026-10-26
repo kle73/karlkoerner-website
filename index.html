@@ -8,7 +8,7 @@
   <title>Karl Körner, embedded systems and networks</title>
   <meta name="description" content="Karl Körner, computer science student at ETH Zurich working on embedded systems and computer networks.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,27 +39,72 @@
     </header>
 
     <main id="main">
-      <section aria-labelledby="focus">
+      <section class="capture" aria-labelledby="capture-title">
+        <div class="capture-head">
+          <h2 id="capture-title">Activity since 2022</h2>
+          <p>Each line is one project or degree, high while it was running. Select one to jump to its details.</p>
+        </div>
+
+        <div class="lanes">
+          <div class="axis" aria-hidden="true">
+            <span class="axis-label"></span>
+            <span class="axis-track">
+              <span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span><span>2027</span><span>2028</span>
+              <span class="now-label">Now</span>
+            </span>
+          </div>
+
+          <a class="lane l-d0" href="#msc">
+            <span class="lane-label"><span class="ch">D0</span> M.Sc., ETH Zurich</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi open"></span><span class="tail expect"></span></span>
+            <span class="vh">, September 2026 to expected 2028</span>
+          </a>
+          <a class="lane l-d1" href="#contention">
+            <span class="lane-label"><span class="ch">D1</span> Contention detection</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi open"></span><span class="tail fade"></span></span>
+            <span class="vh">, October 2026 to present</span>
+          </a>
+          <a class="lane l-d2" href="#leo">
+            <span class="lane-label"><span class="ch">D2</span> LEO satellite storage</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi open"></span><span class="tail fade"></span></span>
+            <span class="vh">, December 2025 to present</span>
+          </a>
+          <a class="lane l-d3" href="#infineon">
+            <span class="lane-label"><span class="ch">D3</span> Infineon Technologies</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></span>
+            <span class="vh">, December 2025 to June 2026</span>
+          </a>
+          <a class="lane l-d4" href="#thesis">
+            <span class="lane-label"><span class="ch">D4</span> Bachelor thesis</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></span>
+            <span class="vh">, February to June 2025</span>
+          </a>
+          <a class="lane l-d5" href="#bsc">
+            <span class="lane-label"><span class="ch">D5</span> B.Sc., ETH Zurich</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></span>
+            <span class="vh">, September 2022 to September 2025</span>
+          </a>
+          <a class="lane l-d6" href="#nautilus">
+            <span class="lane-label"><span class="ch">D6</span> ARIS Nautilus</span>
+            <span class="track" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></span>
+            <span class="vh">, September 2023 to March 2024</span>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="stack-title">
         <div class="rows">
-          <h2 id="focus">Focus</h2>
-          <dl class="pairs">
-          <div class="row">
-            <dt>Embedded and real-time</dt>
-            <dd>Bare-metal C, Zephyr RTOS, STM32, nRF, UART, SPI, I²C, GNSS, LoRa</dd>
+          <h2 id="stack-title">Where I work in the stack</h2>
+          <div class="stack-wrap">
+            <ol class="stack" reversed>
+              <li><span class="layer">Evaluation</span><span class="items">ns-3, OMNeT++ with FLoRa, active Internet measurement, hardware testbeds</span></li>
+              <li><span class="layer">Network and transport</span><span class="items">Routing protocol design, TCP/IP, congestion control</span></li>
+              <li><span class="layer">Link</span><span class="items">MAC protocol design, listen-before-talk, Ethernet, LoRa</span></li>
+              <li><span class="layer">Firmware</span><span class="items">Bare-metal C, Zephyr RTOS, UART, SPI, I²C</span></li>
+              <li><span class="layer">Hardware</span><span class="items">STM32, nRF, GNSS receivers</span></li>
+            </ol>
+            <p class="also">Also C++, Python, Java, OCaml, Linux, Git and SQL. German native, English fluent.</p>
           </div>
-          <div class="row">
-            <dt>Networking and simulation</dt>
-            <dd>Ethernet and TCP/IP, MAC and routing protocol design, ns-3, OMNeT++ with FLoRa</dd>
-          </div>
-          <div class="row">
-            <dt>Programming and tools</dt>
-            <dd>C, C++, Python, Java, OCaml, Linux, Git, SQL</dd>
-          </div>
-          <div class="row">
-            <dt>Languages</dt>
-            <dd>German (native), English (fluent)</dd>
-          </div>
-          </dl>
         </div>
       </section>
 
@@ -68,7 +113,7 @@
           <h2 id="experience">Research and experience</h2>
 
           <article class="row">
-            <p class="when">Oct 2026 – present</p>
+            <p class="when" id="contention"><span class="ch">D1</span> Oct 2026 – present</p>
             <div class="what">
               <h3>Contention detection on the Internet</h3>
               <p class="where">Networked Systems Group, ETH Zurich</p>
@@ -77,7 +122,7 @@
           </article>
 
           <article class="row">
-            <p class="when">Dec 2025 – present</p>
+            <p class="when" id="leo"><span class="ch">D2</span> Dec 2025 – present</p>
             <div class="what">
               <h3>Distributed storage in LEO satellite networks</h3>
               <p class="where">Guided research project, Chair of Connected Mobility, TU Munich</p>
@@ -88,7 +133,7 @@
           </article>
 
           <article class="row">
-            <p class="when">Dec 2025 – Jun 2026</p>
+            <p class="when" id="infineon"><span class="ch">D3</span> Dec 2025 – Jun 2026</p>
             <div class="what">
               <h3>Working student, low-level embedded software</h3>
               <p class="where">Infineon Technologies, Munich</p>
@@ -97,7 +142,7 @@
           </article>
 
           <article class="row">
-            <p class="when">Feb 2025 – Jun 2025</p>
+            <p class="when" id="thesis"><span class="ch">D4</span> Feb 2025 – Jun 2025</p>
             <div class="what">
               <h3>Event-driven wireless sensor network for real-time data acquisition</h3>
               <p class="where">Bachelor thesis with Prof. Luca Benini, Center for Project-Based Learning, ETH Zurich</p>
@@ -107,7 +152,7 @@
           </article>
 
           <article class="row">
-            <p class="when">Sep 2023 – Mar 2024</p>
+            <p class="when" id="nautilus"><span class="ch">D6</span> Sep 2023 – Mar 2024</p>
             <div class="what">
               <h3>Embedded software for an unmanned underwater vehicle</h3>
               <p class="where">Project Nautilus, ARIS Academic Space Initiative Switzerland</p>
@@ -122,7 +167,7 @@
           <h2 id="education">Education</h2>
 
           <article class="row">
-            <p class="when">Sep 2026 – 2028</p>
+            <p class="when" id="msc"><span class="ch">D0</span> Sep 2026 – 2028</p>
             <div class="what">
               <h3>M.Sc. Computer Science</h3>
               <p class="where">ETH Zurich, expected 2028</p>
@@ -131,7 +176,7 @@
           </article>
 
           <article class="row">
-            <p class="when">Sep 2022 – Sep 2025</p>
+            <p class="when" id="bsc"><span class="ch">D5</span> Sep 2022 – Sep 2025</p>
             <div class="what">
               <h3>B.Sc. Computer Science</h3>
               <p class="where">ETH Zurich</p>
@@ -150,21 +195,15 @@
         </div>
       </section>
 
-      <section aria-labelledby="contact">
-        <div class="rows">
-          <h2 id="contact">Contact</h2>
-          <div class="row">
-            <p class="when">Zurich, Switzerland</p>
-            <div class="what">
-              <p>I am open to internships, research collaborations and thesis projects in embedded systems and networking.</p>
-              <ul class="contact-list">
-                <li><a href="mailto:karl.koerner.o@gmail.com">karl.koerner.o@gmail.com</a></li>
-                <li><a href="https://github.com/kle73" rel="noopener noreferrer">github.com/kle73</a></li>
-                <li><a href="karl-koerner-cv.pdf" download>CV as PDF</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <section class="contact" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p class="contact-line">I am open to internships, research collaborations and thesis projects in embedded systems and networking.</p>
+        <p class="contact-mail"><a href="mailto:karl.koerner.o@gmail.com">karl.koerner.o@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="https://github.com/kle73" rel="noopener noreferrer">github.com/kle73</a></li>
+          <li><a href="karl-koerner-cv.pdf" download>CV as PDF</a></li>
+          <li>Zurich, Switzerland</li>
+        </ul>
       </section>
     </main>
 
