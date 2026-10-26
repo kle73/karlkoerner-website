@@ -1,91 +1,176 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Karl Körner</title>
-  <meta name="description" content="Persönliche Website von Karl Körner.">
-  <style>
-    :root {
-      --bg: #f7f5f0;
-      --text: #1d1d1b;
-      --muted: #6b6a65;
-      --accent: #2f5d50;
-      --line: #dcd8ce;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #161614;
-        --text: #ecebe6;
-        --muted: #9a998f;
-        --accent: #7fb8a4;
-        --line: #2e2d29;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.6;
-    }
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 15vh 20px 60px;
-    }
-    h1 {
-      font-size: clamp(2.4rem, 7vw, 3.6rem);
-      line-height: 1.05;
-      margin: 0 0 12px;
-      letter-spacing: -0.02em;
-    }
-    .tagline {
-      color: var(--muted);
-      font-size: 1.15rem;
-      margin: 0 0 48px;
-    }
-    h2 {
-      font-family: system-ui, sans-serif;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin: 40px 0 10px;
-      font-weight: 600;
-    }
-    p { margin: 0 0 16px; font-size: 1.1rem; }
-    a { color: var(--accent); text-underline-offset: 3px; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 1.05rem; }
-    li:last-child { border-bottom: 1px solid var(--line); }
-    footer {
-      margin-top: 64px;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-  </style>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Karl Körner, embedded systems and networks</title>
+  <meta name="description" content="Karl Körner, computer science student at ETH Zurich working on embedded systems and computer networks.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Karl Körner</h1>
-    <p class="tagline">Willkommen auf meiner Website.</p>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <h2>Über mich</h2>
-    <p>Hier steht bald ein kurzer Text über mich: was ich mache, woran ich arbeite und was mich interessiert.</p>
+  <div class="page">
+    <header class="intro">
+      <h1 class="name">Karl Körner</h1>
 
-    <h2>Projekte</h2>
-    <ul>
-      <li>Projekt eins: kommt bald</li>
-      <li>Projekt zwei: kommt bald</li>
-    </ul>
+      <figure class="signal">
+        <svg viewBox="0 0 640 40" role="img" aria-labelledby="signal-caption">
+          <g class="grid">
+            <line x1="42" y1="0" x2="42" y2="40"/><line x1="56" y1="0" x2="56" y2="40"/><line x1="70" y1="0" x2="70" y2="40"/><line x1="84" y1="0" x2="84" y2="40"/><line x1="98" y1="0" x2="98" y2="40"/><line x1="112" y1="0" x2="112" y2="40"/><line x1="126" y1="0" x2="126" y2="40"/><line x1="140" y1="0" x2="140" y2="40"/><line x1="154" y1="0" x2="154" y2="40"/><line x1="168" y1="0" x2="168" y2="40"/><line x1="182" y1="0" x2="182" y2="40"/>
+            <line x1="210" y1="0" x2="210" y2="40"/><line x1="224" y1="0" x2="224" y2="40"/><line x1="238" y1="0" x2="238" y2="40"/><line x1="252" y1="0" x2="252" y2="40"/><line x1="266" y1="0" x2="266" y2="40"/><line x1="280" y1="0" x2="280" y2="40"/><line x1="294" y1="0" x2="294" y2="40"/><line x1="308" y1="0" x2="308" y2="40"/><line x1="322" y1="0" x2="322" y2="40"/><line x1="336" y1="0" x2="336" y2="40"/><line x1="350" y1="0" x2="350" y2="40"/>
+          </g>
+          <path class="wave" pathLength="1" d="M0 6 L42 6 L42 34 L56 34 L56 6 L84 6 L84 34 L98 34 L98 6 L112 6 L112 34 L140 34 L140 6 L154 6 L154 34 L168 34 L168 6 L210 6 L210 34 L224 34 L224 6 L252 6 L252 34 L266 34 L266 6 L280 6 L280 34 L308 34 L308 6 L322 6 L322 34 L336 34 L336 6 L640 6"/>
+        </svg>
+        <figcaption id="signal-caption">My initials as two UART frames, 8N1, least significant bit first: 0x4B 0x4B.</figcaption>
+      </figure>
 
-    <h2>Kontakt</h2>
-    <p><a href="https://github.com/kle73">GitHub</a></p>
+      <p class="lede">I study computer science at ETH Zurich and work where software meets hardware and networks: firmware for microcontrollers, MAC and routing protocols, and the simulations and testbeds that show whether they hold up.</p>
 
-    <footer>© 2026 Karl Körner</footer>
-  </main>
+      <ul class="actions">
+        <li><a class="button" href="karl-koerner-cv.pdf" download>Download CV <small>PDF, 1 page</small></a></li>
+        <li><a href="https://github.com/kle73" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="mailto:karl.koerner.o@gmail.com">karl.koerner.o@gmail.com</a></li>
+      </ul>
+    </header>
+
+    <main id="main">
+      <section aria-labelledby="focus">
+        <div class="rows">
+          <h2 id="focus">Focus</h2>
+          <dl class="pairs">
+          <div class="row">
+            <dt>Embedded and real-time</dt>
+            <dd>Bare-metal C, Zephyr RTOS, STM32, nRF, UART, SPI, I²C, GNSS, LoRa</dd>
+          </div>
+          <div class="row">
+            <dt>Networking and simulation</dt>
+            <dd>Ethernet and TCP/IP, MAC and routing protocol design, ns-3, OMNeT++ with FLoRa</dd>
+          </div>
+          <div class="row">
+            <dt>Programming and tools</dt>
+            <dd>C, C++, Python, Java, OCaml, Linux, Git, SQL</dd>
+          </div>
+          <div class="row">
+            <dt>Languages</dt>
+            <dd>German (native), English (fluent)</dd>
+          </div>
+          </dl>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience">
+        <div class="rows">
+          <h2 id="experience">Research and experience</h2>
+
+          <article class="row">
+            <p class="when">Oct 2026 – present</p>
+            <div class="what">
+              <h3>Contention detection on the Internet</h3>
+              <p class="where">Networked Systems Group, ETH Zurich</p>
+              <p>A measurement study on whether Internet flows actually compete for bandwidth. I am developing a congestion control algorithm that detects path contention and extending existing active measurement techniques.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">Dec 2025 – present</p>
+            <div class="what">
+              <h3>Distributed storage in LEO satellite networks</h3>
+              <p class="where">Guided research project, Chair of Connected Mobility, TU Munich</p>
+              <p>Taking a published in-orbit distributed storage system (LEO-NET ’25) from an idealized simulator to packet-level ns-3 simulations with realistic orbital dynamics.</p>
+              <p>I identified the constraints that break the original design and developed a ring-based routing algorithm, with a conflict-free protocol for relocating the routing structure as satellites move.</p>
+              <p><a href="https://github.com/kle73/storage_in_space" rel="noopener noreferrer">Source code on GitHub</a></p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">Dec 2025 – Jun 2026</p>
+            <div class="what">
+              <h3>Working student, low-level embedded software</h3>
+              <p class="where">Infineon Technologies, Munich</p>
+              <p>Developed and debugged bare-metal Ethernet and TCP/IP communication software for networked, microcontroller-based control units.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">Feb 2025 – Jun 2025</p>
+            <div class="what">
+              <h3>Event-driven wireless sensor network for real-time data acquisition</h3>
+              <p class="where">Bachelor thesis with Prof. Luca Benini, Center for Project-Based Learning, ETH Zurich</p>
+              <p>Firmware in C on Zephyr RTOS for nRF sensor nodes with GNSS-based real-time event detection.</p>
+              <p>Designed a hybrid MAC protocol, listen-before-talk with exponential backoff and selective acknowledgements, and validated it in OMNeT++ with FLoRa and on real hardware.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">Sep 2023 – Mar 2024</p>
+            <div class="what">
+              <h3>Embedded software for an unmanned underwater vehicle</h3>
+              <p class="where">Project Nautilus, ARIS Academic Space Initiative Switzerland</p>
+              <p>Implemented UART-based communication protocols for internal data exchange on STM32.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="education">
+        <div class="rows">
+          <h2 id="education">Education</h2>
+
+          <article class="row">
+            <p class="when">Sep 2026 – 2028</p>
+            <div class="what">
+              <h3>M.Sc. Computer Science</h3>
+              <p class="where">ETH Zurich, expected 2028</p>
+              <p>Current courses: Advanced Topics in Communication Networks, Network Security, Security of Wireless Networks.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">Sep 2022 – Sep 2025</p>
+            <div class="what">
+              <h3>B.Sc. Computer Science</h3>
+              <p class="where">ETH Zurich</p>
+              <p>Grade average 5.04 on the Swiss 6.0 scale.</p>
+            </div>
+          </article>
+
+          <article class="row">
+            <p class="when">2015 – 2021</p>
+            <div class="what">
+              <h3>Abitur</h3>
+              <p class="where">Gerhart-Hauptmann-Gymnasium, Berlin</p>
+              <p>Final grade 1.0, the best possible. Physics award of the German Physical Society (DPG).</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="contact">
+        <div class="rows">
+          <h2 id="contact">Contact</h2>
+          <div class="row">
+            <p class="when">Zurich, Switzerland</p>
+            <div class="what">
+              <p>I am open to internships, research collaborations and thesis projects in embedded systems and networking.</p>
+              <ul class="contact-list">
+                <li><a href="mailto:karl.koerner.o@gmail.com">karl.koerner.o@gmail.com</a></li>
+                <li><a href="https://github.com/kle73" rel="noopener noreferrer">github.com/kle73</a></li>
+                <li><a href="karl-koerner-cv.pdf" download>CV as PDF</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Karl Körner. All rights reserved. No cookies, no tracking.</p>
+    </footer>
+  </div>
 </body>
 </html>
