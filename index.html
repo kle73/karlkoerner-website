@@ -28,11 +28,16 @@
       </div>
 
       <figure class="signal">
-        <svg viewBox="0 0 640 40" preserveAspectRatio="xMinYMid meet" role="img" aria-labelledby="signal-caption">
+        <svg viewBox="0 -30 640 70" preserveAspectRatio="xMinYMid meet" role="img" aria-labelledby="signal-caption">
+          <g class="decode" aria-hidden="true">
+            <g class="frame f1"><rect x="42" y="-27" width="140" height="17"/><text x="112" y="-15">K, 0x4B</text></g>
+            <g class="frame f2"><rect x="210" y="-27" width="140" height="17"/><text x="280" y="-15">K, 0x4B</text></g>
+          </g>
           <g class="grid">
             <line x1="42" y1="0" x2="42" y2="40"/><line x1="56" y1="0" x2="56" y2="40"/><line x1="70" y1="0" x2="70" y2="40"/><line x1="84" y1="0" x2="84" y2="40"/><line x1="98" y1="0" x2="98" y2="40"/><line x1="112" y1="0" x2="112" y2="40"/><line x1="126" y1="0" x2="126" y2="40"/><line x1="140" y1="0" x2="140" y2="40"/><line x1="154" y1="0" x2="154" y2="40"/><line x1="168" y1="0" x2="168" y2="40"/><line x1="182" y1="0" x2="182" y2="40"/>
             <line x1="210" y1="0" x2="210" y2="40"/><line x1="224" y1="0" x2="224" y2="40"/><line x1="238" y1="0" x2="238" y2="40"/><line x1="252" y1="0" x2="252" y2="40"/><line x1="266" y1="0" x2="266" y2="40"/><line x1="280" y1="0" x2="280" y2="40"/><line x1="294" y1="0" x2="294" y2="40"/><line x1="308" y1="0" x2="308" y2="40"/><line x1="322" y1="0" x2="322" y2="40"/><line x1="336" y1="0" x2="336" y2="40"/><line x1="350" y1="0" x2="350" y2="40"/>
           </g>
+          <line class="cursor" x1="0" y1="-30" x2="0" y2="40"/>
           <path class="wave" pathLength="1" d="M0 6 L42 6 L42 34 L56 34 L56 6 L84 6 L84 34 L98 34 L98 6 L112 6 L112 34 L140 34 L140 6 L154 6 L154 34 L168 34 L168 6 L210 6 L210 34 L224 34 L224 6 L252 6 L252 34 L266 34 L266 6 L280 6 L280 34 L308 34 L308 6 L322 6 L322 34 L336 34 L336 6 L640 6"/>
         </svg>
         <figcaption id="signal-caption">My initials as two UART frames, 8N1, least significant bit first: 0x4B 0x4B.</figcaption>
@@ -45,13 +50,15 @@
       <section class="block" aria-labelledby="work">
         <div class="block-head">
           <h2 id="work">Work and projects</h2>
-          <p class="legend"><span class="legend-trace" aria-hidden="true"></span>Each trace marks when the project ran, from 2022 to 2028. The dashed line is today.</p>
+          <p class="legend">The numbered blocks show which layers of the stack a project works on: 1 hardware, 2 firmware, 3 link, 4 network and transport, 5 evaluation.</p>
         </div>
 
         <div class="cells cells-work">
           <article class="cell">
-            <div class="trace t-contention" aria-hidden="true"><span class="lo lo1"></span><span class="hi open"></span><span class="tail fade"></span></div>
-            <p class="when">Oct 2026 – present</p>
+            <div class="cell-top">
+              <p class="when">Oct 2026 – present</p>
+              <p class="layers"><span class="vh">Stack layers: Network and transport, Evaluation</span><span class="pins" aria-hidden="true"><span class="pin" title="Hardware">1</span><span class="pin" title="Firmware">2</span><span class="pin" title="Link">3</span><span class="pin on" title="Network and transport">4</span><span class="pin on" title="Evaluation">5</span></span></p>
+            </div>
             <h3>Contention detection on the Internet</h3>
             <p class="where">Networked Systems Group, ETH Zurich</p>
             <p>A measurement study on whether Internet flows actually compete for bandwidth. I am developing a congestion control algorithm that detects path contention and extending existing active measurement techniques.</p>
@@ -59,8 +66,10 @@
           </article>
 
           <article class="cell cell-wide">
-            <div class="trace t-leo" aria-hidden="true"><span class="lo lo1"></span><span class="hi open"></span><span class="tail fade"></span></div>
-            <p class="when">Dec 2025 – present</p>
+            <div class="cell-top">
+              <p class="when">Dec 2025 – present</p>
+              <p class="layers"><span class="vh">Stack layers: Network and transport, Evaluation</span><span class="pins" aria-hidden="true"><span class="pin" title="Hardware">1</span><span class="pin" title="Firmware">2</span><span class="pin" title="Link">3</span><span class="pin on" title="Network and transport">4</span><span class="pin on" title="Evaluation">5</span></span></p>
+            </div>
             <h3>Distributed storage in LEO satellite networks</h3>
             <p class="where">Guided research project, Chair of Connected Mobility, TU Munich</p>
             <div class="split">
@@ -72,8 +81,10 @@
           </article>
 
           <article class="cell">
-            <div class="trace t-infineon" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></div>
-            <p class="when">Dec 2025 – Jun 2026</p>
+            <div class="cell-top">
+              <p class="when">Dec 2025 – Jun 2026</p>
+              <p class="layers"><span class="vh">Stack layers: Firmware, Link, Network and transport</span><span class="pins" aria-hidden="true"><span class="pin" title="Hardware">1</span><span class="pin on" title="Firmware">2</span><span class="pin on" title="Link">3</span><span class="pin on" title="Network and transport">4</span><span class="pin" title="Evaluation">5</span></span></p>
+            </div>
             <h3>Low-level embedded software</h3>
             <p class="where">Working student, Infineon Technologies, Munich</p>
             <p>Developed and debugged bare-metal Ethernet and TCP/IP communication software for networked, microcontroller-based control units.</p>
@@ -81,8 +92,10 @@
           </article>
 
           <article class="cell">
-            <div class="trace t-thesis" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></div>
-            <p class="when">Feb 2025 – Jun 2025</p>
+            <div class="cell-top">
+              <p class="when">Feb 2025 – Jun 2025</p>
+              <p class="layers"><span class="vh">Stack layers: Hardware, Firmware, Link, Evaluation</span><span class="pins" aria-hidden="true"><span class="pin on" title="Hardware">1</span><span class="pin on" title="Firmware">2</span><span class="pin on" title="Link">3</span><span class="pin" title="Network and transport">4</span><span class="pin on" title="Evaluation">5</span></span></p>
+            </div>
             <h3>Event-driven wireless sensor network</h3>
             <p class="where">Bachelor thesis with Prof. Luca Benini, Center for Project-Based Learning, ETH Zurich</p>
             <p>Zephyr firmware for nRF sensor nodes with GNSS-based real-time event detection, and a hybrid MAC protocol with listen-before-talk, exponential backoff and selective acknowledgements, validated in OMNeT++ with FLoRa and on real hardware.</p>
@@ -90,8 +103,10 @@
           </article>
 
           <article class="cell">
-            <div class="trace t-nautilus" aria-hidden="true"><span class="lo lo1"></span><span class="hi"></span><span class="lo lo2"></span></div>
-            <p class="when">Sep 2023 – Mar 2024</p>
+            <div class="cell-top">
+              <p class="when">Sep 2023 – Mar 2024</p>
+              <p class="layers"><span class="vh">Stack layers: Hardware, Firmware</span><span class="pins" aria-hidden="true"><span class="pin on" title="Hardware">1</span><span class="pin on" title="Firmware">2</span><span class="pin" title="Link">3</span><span class="pin" title="Network and transport">4</span><span class="pin" title="Evaluation">5</span></span></p>
+            </div>
             <h3>Embedded software for an underwater vehicle</h3>
             <p class="where">Project Nautilus, ARIS Academic Space Initiative Switzerland</p>
             <p>Implemented UART-based communication protocols for internal data exchange on STM32.</p>
