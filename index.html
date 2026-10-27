@@ -16,10 +16,13 @@
 
   <div class="page">
     <header class="intro">
-      <h1 class="name">Karl<br>Körner</h1>
+      <div class="id">
+        <h1 class="name">Karl Körner</h1>
+        <p class="role">Embedded systems and computer networks<br>M.Sc. student at ETH Zurich</p>
+      </div>
 
       <div class="intro-text">
-        <p class="lede">I study computer science at ETH Zurich and write software close to the hardware and the network: firmware for microcontrollers, MAC and routing protocols, and the simulations and testbeds that show whether they hold up.</p>
+        <p class="lede">I write software close to the hardware and the network: firmware for microcontrollers, MAC and routing protocols, and the simulations and testbeds that show whether they hold up.</p>
         <ul class="actions">
           <li><a class="button" href="karl-koerner-cv.pdf" download>Download CV <small>PDF, 1 page</small></a></li>
           <li><a href="https://github.com/kle73" rel="noopener noreferrer">GitHub</a></li>
@@ -46,11 +49,53 @@
 
     <main id="main">
 
+      <!-- Skills -->
+      <section class="block" aria-labelledby="skills">
+        <div class="block-head">
+          <h2 id="skills">Skills</h2>
+          <p class="legend">Ordered like a protocol stack, from firmware up to how I evaluate a system.</p>
+        </div>
+
+        <ol class="cells cells-stack">
+          <li class="cell layer">
+            <span class="layer-no">1</span>
+            <h3>Firmware</h3>
+            <p>Bare-metal C and Zephyr RTOS on STM32 and nRF, UART, SPI, I²C, GNSS</p>
+          </li>
+          <li class="cell layer">
+            <span class="layer-no">2</span>
+            <h3>Link</h3>
+            <p>MAC protocol design, listen-before-talk, Ethernet, LoRa</p>
+          </li>
+          <li class="cell layer">
+            <span class="layer-no">3</span>
+            <h3>Network and transport</h3>
+            <p>Routing protocol design, TCP/IP, congestion control</p>
+          </li>
+          <li class="cell layer">
+            <span class="layer-no">4</span>
+            <h3>Evaluation</h3>
+            <p>ns-3, OMNeT++ with FLoRa, Internet measurement, tests on real devices</p>
+          </li>
+        </ol>
+
+        <div class="cells cells-extra">
+          <div class="cell">
+            <h3>Programming and tools</h3>
+            <p>C, C++, Python, Java, OCaml, Linux, Git, SQL</p>
+          </div>
+          <div class="cell">
+            <h3>Languages</h3>
+            <p>German, native. English, fluent.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Work and projects -->
       <section class="block" aria-labelledby="work">
         <div class="block-head">
           <h2 id="work">Work and projects</h2>
-          <p class="legend">The numbered blocks show which layers of the stack a project works on: 1 firmware, 2 link, 3 network and transport, 4 evaluation.</p>
+          <p class="legend">The numbered blocks show which of the stack layers above a project works on: 1 firmware, 2 link, 3 network and transport, 4 evaluation.</p>
         </div>
 
         <div class="cells cells-work">
@@ -112,48 +157,6 @@
             <p>Implemented UART-based communication protocols for internal data exchange on STM32.</p>
             <p class="tags">STM32, UART</p>
           </article>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="block" aria-labelledby="skills">
-        <div class="block-head">
-          <h2 id="skills">Skills</h2>
-          <p class="legend">Ordered like a protocol stack, from firmware up to how I evaluate a system.</p>
-        </div>
-
-        <ol class="cells cells-stack">
-          <li class="cell layer">
-            <span class="layer-no">1</span>
-            <h3>Firmware</h3>
-            <p>Bare-metal C and Zephyr RTOS on STM32 and nRF, UART, SPI, I²C, GNSS</p>
-          </li>
-          <li class="cell layer">
-            <span class="layer-no">2</span>
-            <h3>Link</h3>
-            <p>MAC protocol design, listen-before-talk, Ethernet, LoRa</p>
-          </li>
-          <li class="cell layer">
-            <span class="layer-no">3</span>
-            <h3>Network and transport</h3>
-            <p>Routing protocol design, TCP/IP, congestion control</p>
-          </li>
-          <li class="cell layer">
-            <span class="layer-no">4</span>
-            <h3>Evaluation</h3>
-            <p>ns-3, OMNeT++ with FLoRa, Internet measurement, tests on real devices</p>
-          </li>
-        </ol>
-
-        <div class="cells cells-extra">
-          <div class="cell">
-            <h3>Programming and tools</h3>
-            <p>C, C++, Python, Java, OCaml, Linux, Git, SQL</p>
-          </div>
-          <div class="cell">
-            <h3>Languages</h3>
-            <p>German, native. English, fluent.</p>
-          </div>
         </div>
       </section>
 
