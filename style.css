@@ -420,7 +420,7 @@ p {
 /* Skills */
 
 .cells-stack {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .layer {
@@ -452,12 +452,12 @@ p {
 }
 
 .cells-extra {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 0.75rem;
 }
 
 .cells-extra .cell:first-child {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .cells-extra .cell:last-child {
